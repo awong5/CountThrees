@@ -22,7 +22,6 @@
 
   <!-- compile the java code in ${src.dir} into ${build.dir} -->
   <target name="compile" depends="init,link" description="compile java sources">
-    <!-- <javac includeantruntime="false" srcdir="${source.dir}" destdir="${build.dir}" /> -->
     <javac srcdir="${source.dir}" destdir="${build.dir}" />
   </target>
 
