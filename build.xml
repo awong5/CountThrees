@@ -15,13 +15,8 @@
     <mkdir dir="${doc.dir}" />
   </target>
 
-  <!-- link data file to bin dir -->
-  <target name="link" depends="init" description="link data file build dir">
-    <symlink link="${build.dir}/threesData.bin" resource="${basedir}/threesData.bin" />
-  </target> 
-
   <!-- compile the java code in ${src.dir} into ${build.dir} -->
-  <target name="compile" depends="init,link" description="compile java sources">
+  <target name="compile" depends="init" description="compile java sources">
     <javac srcdir="${source.dir}" destdir="${build.dir}" />
   </target>
 
